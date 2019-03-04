@@ -1,0 +1,931 @@
+/* Variables
+------------------------------------------------------------------
+{
+  Color: [
+    {
+      value: 'red',
+      sample: '#a62021',
+      NormalColor: '#463440',
+      HoverColor: '#811d1d',
+	  TextColor: '#503849',
+	  logoColor: '#614959',
+	  NavColor: '#c0b5ce',
+	  SubNavColor: '#ddc6ac',
+	  LandingHeading: '#ddc6ac',
+	  LandingText: '#b4acb3',
+	  FooterInputBorder: '#3a3539',
+	  HighlightButtonText: '#ecdbc8',
+	  BlockquoteFooterBorder: '#463c42',
+	  BlockquoteFooterColor: '#766971'
+    },
+    {
+      value: 'blue',
+      sample: '#325d79',
+      NormalColor: '#325d79',
+      HoverColor: '#26673f',
+	  TextColor: '#3a3b3b',
+	  logoColor: '#1f415d',
+	  NavColor: '#6e968b',
+	  SubNavColor: '#ddc6ac',
+	  LandingHeading: '#ddc6ac',
+	  LandingText: '#5f897e',
+	  FooterInputBorder: '#293b4b',
+	  HighlightButtonText: '#1d2e25',
+	  BlockquoteFooterBorder: '#28415a',
+	  BlockquoteFooterColor: '#486786'
+    },
+    {
+      value: 'green',
+      sample: '#245b41',
+      NormalColor: '#245b41',
+      HoverColor: '#ae1613',
+	  TextColor: '#07321e',
+	  logoColor: '#1f583b',
+	  NavColor: '#6e968b',
+	  SubNavColor: '#ddc6ac',
+	  LandingHeading: '#ddc6ac',
+	  LandingText: '#5f897e',
+	  FooterInputBorder: '#313e38',
+	  HighlightButtonText: '#1d2e25',
+	  BlockquoteFooterBorder: '#385043',
+	  BlockquoteFooterColor: '#617c6e'
+    },
+    {
+      value: 'purple-blue',
+      sample: '#73b2b1',
+      NormalColor: '#48474f',
+      HoverColor: '#318f8d',
+	  TextColor: '#3a3742',
+	  logoColor: '#55515f',
+	  NavColor: '#c0b5ce',
+	  SubNavColor: '#8b8a8c',
+	  LandingHeading: '#ddc6ac',
+	  LandingText: '#b4acb3',
+	  FooterInputBorder: '#424145',
+	  HighlightButtonText: '#ffffff',
+	  BlockquoteFooterBorder: '#4c4a53',
+	  BlockquoteFooterColor: '#7a7884'
+    },
+    {
+      value: 'purple',
+      sample: '#604f5b',
+      NormalColor: '#604f5b',
+      HoverColor: '#604f5b',
+	  TextColor: '#3a3b3b',
+	  logoColor: '#52444e',
+	  NavColor: '#877f84',
+	  SubNavColor: '#918a8e',
+	  LandingHeading: '#f3c82d',
+	  LandingText: '#979095',
+	  FooterInputBorder: '#3e343b',
+	  HighlightButtonText: '#ffffff',
+	  BlockquoteFooterBorder: '#493844',
+	  BlockquoteFooterColor: '#7a5f73'
+    }
+  ]
+}
+------------------------------------------------------------------
+*/
+
+
+/* Resets
+--------------------------------------------------------------------------------*/
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, 
+fieldset, input {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: 0;
+}
+
+a {
+	text-decoration: underline;
+}
+
+/* General Styling and Structure
+--------------------------------------------------------------------------------*/
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color:#3a3b3b;
+	line-height:20px;
+	background:url(footer-bg-bottom-$Color.jpg) repeat top;
+}
+
+.container {
+	margin: 0 auto;
+	width: 940px;
+}
+
+.outer-container {
+	background:url(container-shadow.png) repeat-y center top;
+}
+
+#header-wrap,
+#logo-wrap-inner,
+#banner-wrap,
+#nav-wrap,
+#main-wrap,
+#copyright-wrap,
+#footer-wrap,
+#footer-wrap-inner,
+.outer-container
+{
+        width:100%;
+		min-width:960px;
+}
+
+a {
+	color: $NormalColor;
+}
+
+a:hover {
+	color: $HoverColor;
+}
+
+h2 {
+	font-size: 28px;
+	padding: .5em 0 .2em 0;
+	line-height: 1.2;
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	color: $NormalColor;
+}
+
+p {
+	line-height: 1.5;
+	padding: .5em 0;
+}
+
+div#content {min-height:400px;}
+
+/* Header
+--------------------------------------------------------------------------------*/
+
+#header-wrap {
+	background:url(header-bg-$Color.jpg) repeat-x top;
+	overflow:hidden;
+}
+
+#header-wrap .outer-container {
+	height:44px;
+}
+
+#logo,
+#logo a {
+	font-size:42px;
+	line-height:60px;
+	color: $logoColor;
+	font-family: 'Lobster', cursive;
+	text-decoration:none;
+}
+
+#logo {	padding:40px 0px 50px; padding-left:15px;}
+
+#logo-wrap table {
+	border-collapse: collapse;
+	border-spacing: 0;
+        width:100%;
+}
+
+#logo-wrap td {
+	vertical-align: middle;
+	text-align: left;
+}
+
+/* Header: Phone Number
+--------------------------------------------------------------------------------*/
+
+.phone-number {
+	float:left;
+	margin-top:10px;
+}
+
+.phone-number .wsite-text {
+	color: #fff;
+	font-size: 12px;
+	font-weight: normal;
+	display: block;
+	white-space: nowrap;
+	margin-left:10px;
+}
+
+.phone-number .wsite-text a {color:#dfd1c0}
+.phone-number .wsite-text a:hover {color:#fff;}
+
+/* Header: Social Links
+--------------------------------------------------------------------------------*/
+
+.social {
+	float:right;
+}
+
+.wsite-social {
+	vertical-align: middle;
+	margin:10px 15px 0px 0px;
+}
+
+.wsite-social-item {
+	width: 20px;
+	height: 20px;
+	margin: 0 0 0 3px;
+	background-image:url(social-$color.png);
+}
+
+.wsite-social-facebook {background-position:0 0;}
+	.wsite-social-facebook:hover {background-position:0 -20px;}
+	.wsite-social-facebook:active {background-position:0 -40px;}
+.wsite-social-pinterest {background-position:-20px 0;}
+	.wsite-social-pinterest:hover {background-position:-20px -20px;}
+	.wsite-social-pinterest:active {background-position:-20px -40px;}
+.wsite-social-twitter {background-position:-40px 0;}
+	.wsite-social-twitter:hover {background-position:-40px -20px;}
+	.wsite-social-twitter:active {background-position:-40px -40px;}
+.wsite-social-linkedin {background-position:-60px 0;}
+	.wsite-social-linkedin:hover {background-position:-60px -20px;}
+	.wsite-social-linkedin:active {background-position:-60px -40px;}
+.wsite-social-mail {background-position:-80px 0;}
+	.wsite-social-mail:hover {background-position:-80px -20px;}
+	.wsite-social-mail:active {background-position:-80px -40px;}
+.wsite-social-rss {background-position:-100px 0;}
+	.wsite-social-rss:hover {background-position:-100px -20px;}
+	.wsite-social-rss:active {background-position:-100px -40px;}
+.wsite-social-flickr {background-position:-120px 0;}
+	.wsite-social-flickr:hover {background-position:-120px -20px;}
+	.wsite-social-flickr:active {background-position:-120px -40px;}
+.wsite-social-plus {background-position:-140px 0;}
+	.wsite-social-plus:hover {background-position:-140px -20px;}
+	.wsite-social-plus:active {background-position:-140px -40px;}
+.wsite-social-vimeo {background-position:-160px 0;}
+	.wsite-social-vimeo:hover {background-position:-160px -20px;}
+	.wsite-social-vimeo:active {background-position:-160px -40px;}
+.wsite-social-yahoo {background-position:-180px 0;}
+	.wsite-social-yahoo:hover {background-position:-180px -20px;}
+	.wsite-social-yahoo:active {background-position:-180px -40px;}
+.wsite-social-youtube {background-position:-200px 0;}
+	.wsite-social-youtube:hover {background-position:-200px -20px;}
+	.wsite-social-youtube:active {background-position:-200px -40px;}
+
+
+/* Header: Search Box
+--------------------------------------------------------------------------------*/
+
+.search .wsite-search {
+	float:right;
+	margin-right: 15px;
+}
+
+.wsite-search {
+	vertical-align: middle;
+	width:220px;
+}
+
+.wsite-search-input {
+	width: 170px;
+	height:14px ;
+	border: none ;
+	padding: 10px !important;
+	font-family: Helvetica, sans-serif;
+	color:#f2eae0 ;
+	font-size: 11px;
+	float:left;
+	background: url(search-bg-$Color.png) no-repeat;
+}
+
+.wsite-search-button {
+	position: relative;
+	width: 30px;
+	height: 34px;
+	border: none;
+	background: url(search-icon-$Color.png) no-repeat;
+}
+
+/* Logo
+--------------------------------------------------------------------------------*/
+
+#logo-wrap {
+	background:url(logo-wrap-bg-repeat.png) repeat;
+}
+
+#logo-wrap-inner {
+	background:url(logo-wrap-bg.png) repeat-x bottom;
+}
+
+/* Verticle Navigation
+--------------------------------------------------------------------------------*/
+
+.nav-v #nav {
+	clear: both;
+	overflow: hidden;
+	position: relative;
+}
+
+.nav-v #nav ul {
+	list-style: none;
+	margin: 0px 65px;
+	overflow:hidden;
+}
+
+.nav-v #nav ul li {
+	list-style: none !important;
+	text-align:center;
+	margin-bottom:20px;
+	float:left;
+	width:100%;
+}
+
+.nav-v #nav ul li a {
+	display: block;
+	font-family: 'Handlee', cursive;
+	color: $NavColor;
+	border: 0;
+	outline: 0;
+	list-style-type: none;
+	font-size: 16px;
+	text-align:center;
+	text-decoration:none;
+}
+
+.nav-v #nav ul li#active a,
+.nav-v #nav ul li a:hover {
+	color: #fff;
+	border: 0;
+}
+
+/* Horizontal Navigation
+--------------------------------------------------------------------------------*/
+
+.nav-h #nav {
+	clear: both;
+	overflow: hidden;
+	position: relative;
+}
+
+.nav-h #nav ul {
+	list-style: none;
+}
+
+.nav-h #nav ul li {
+	list-style: none !important;
+	float:left;
+}
+
+.nav-h #nav ul li a {
+	display: block;
+	font-family: 'Handlee', cursive;
+	color: $NavColor;
+	padding-bottom: 10px;
+	border: 0;
+	outline: 0;
+	list-style-type: none;
+	font-size: 16px;
+	text-align:center;
+	margin:0px 20px;
+}
+
+.nav-h #nav ul li#active a,
+.nav-h #nav ul li a:hover {
+	color: #fff;
+	border: 0;
+}
+
+/* Navigation Submenu's
+--------------------------------------------------------------------------------*/
+
+#wsite-menus .wsite-menu {
+	background:url(sub-nav-bg-$Color.jpg) repeat;
+	-webkit-box-shadow:  0px 0px 6px 6px rgba(0, 0, 0, 0.15);
+    box-shadow:  0px 0px 6px 6px rgba(0, 0, 0, 0.15);
+	padding:5px 0;
+}
+
+#wsite-menus .wsite-menu li a {
+	font-family: 'Handlee', cursive;
+	color: $SubNavColor;
+	background: none;
+	border: 0;
+	text-align:left;
+}
+
+#wsite-menus .wsite-menu li a:hover {
+	color: #fff;
+	background: none;
+}
+
+/* Universal banner
+--------------------------------------------------------------------------------*/
+
+#tent {
+	width:994px;
+	margin:0px auto;
+	background:url(tent-$Color.png) no-repeat center top;
+	height:30px;
+	position:relative;
+	margin-bottom:33px;
+}
+
+#rope-left {
+	width:23px;
+	height:124px;
+	position:absolute;
+	top:-114px;
+	left:4px;
+	background:url(tent-rope-left.png) no-repeat;
+}
+
+#rope-right {
+	width:23px;
+	height:124px;
+	position:absolute;
+	top:-114px;
+	right:4px;
+	background:url(tent-rope-right.png) no-repeat;
+}
+
+#banner-wrap .container {
+	position:relative;
+}
+
+/* Page type: Tall header
+--------------------------------------------------------------------------------*/
+
+.tall-header-page #banner-wrap {
+	background:url(banner-tall-bg-$Color.jpg) repeat-x center top;
+	height:501px;
+}
+
+.tall-header-page #nav {
+	float:left;
+	background: url(nav-bg-v-$Color.png) no-repeat;
+	height:254px;
+	width:292px;
+	position:absolute;
+	left:-41px;
+	top:30px;
+	z-index:1;
+	padding:40px 0px 80px;
+}
+
+.tall-header-page #banner {
+	background: url(tall-header-bg.png) no-repeat;
+	width:687px;
+	height:426px;
+	float:right;
+}
+
+.tall-header-page .wsite-header {
+	width: 664px;
+	height: 381px;
+	background: url(banner-tall.jpg) no-repeat;
+	margin:11px 0px 0px 12px;
+}
+
+/* Page type: Short header
+--------------------------------------------------------------------------------*/
+
+.short-header-page #banner-wrap {
+	background:url(banner-short-bg-$Color.jpg) repeat-x center top;
+	height:425px;
+}
+
+.short-header-page #banner {
+	background: url(banner-short-bg.png) no-repeat;
+	width:943px;
+	height:298px;
+}
+
+.short-header-page #nav {
+	background: url(nav-bg-h-$Color.png) no-repeat;
+	height:81px;
+	width:943px;
+	padding:23px 12px;
+}
+
+.short-header-page #tent {
+	margin-bottom:15px;
+}
+
+.short-header-page .wsite-header {
+	width: 920px;
+	height: 261px;
+	background: url(banner-short.jpg) no-repeat;
+	margin:11px 0px 0px 12px;
+	float:left;
+}
+
+/* Page type: No header
+--------------------------------------------------------------------------------*/
+
+.no-header-page #banner-wrap {
+	background:url(no-header-bg-$Color.jpg) repeat-x center top;
+	height:127px;
+}
+
+.no-header-page #tent {
+	margin-bottom:15px;
+}
+
+.no-header-page #nav {
+	background: url(nav-bg-h-$Color.png) no-repeat;
+	width:943px;
+	padding:23px 12px;
+}
+
+.no-header-page .wsite-header  {
+        display:none;
+}
+
+/* Page type: Landing page
+--------------------------------------------------------------------------------*/
+
+.landing-page #banner-wrap {
+	background:url(banner-tall-bg-$Color.jpg) repeat-x center top;
+	height:501px;
+}
+
+.landing-page #nav {
+	float:left;
+	background: url(nav-bg-v-$Color.png) no-repeat;
+	height:254px;
+	width:292px;
+	position:absolute;
+	left:-41px;
+	top:30px;
+	z-index:1;
+	padding:40px 0px 80px;
+}
+
+.landing-page #banner {
+	background: url(banner-landing-bg-$Color.png) no-repeat;
+	width:687px;
+	height:426px;
+	float:right;
+}
+
+#bannerleft {
+	float: left;
+	width: 393px;
+}
+
+.landing-page .wsite-header {
+	width: 373px;
+	height: 381px;
+	background: url(banner-landing.jpg) no-repeat;
+	margin:11px 0px 0px 12px;
+}
+
+.landing-banner-outer {
+	display: table;
+	#position: relative;
+	overflow: hidden;
+}
+
+.landing-banner-mid {
+	#position: absolute;
+	#top: 50%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.landing-banner-inner {
+	#position: relative;
+	#top: -50%;
+}
+
+#bannerright {
+	float: right;
+	width: 235px;
+	height: 381px;
+	padding: 0 30px 0px 20px;
+	margin-top: 14px;
+}
+
+#bannerright h2 {
+	color: $LandingHeading;
+	font-size: 28px;
+	font-family: 'Lobster', cursive;
+	padding: 0px;
+	line-height: 28px;
+}
+
+#bannerright p {
+	color: $LandingText;
+	font-size: 16px;
+	font-family: 'Handlee', cursive;
+	padding: 20px 0px;
+	line-height: 140%;
+}
+
+#bannerright a {color:#fff; text-decoration:none;}
+
+#bannerright a:hover {text-decoration:underline;}
+
+/* Main Content
+--------------------------------------------------------------------------------*/
+
+#main-wrap {background: url(body-bg.png) repeat;}
+
+#main-wrap .container {
+	padding:20px 0px;
+}
+#main-wrap .container p {color:$TextColor;}
+
+#main-wrap .paragraph li {
+	color:$HoverColor;
+	font-style:italic;
+}
+
+blockquote {
+	color:$HoverColor;
+	font-style:italic;
+	border-left:4px solid $HoverColor !important;
+	padding-left:20px;
+	line-height:1.5;
+	margin:10px 0 10px 0;
+}
+
+
+
+#main-wrap .container form .wsite-button {
+	margin-top:20px;
+}
+
+/* Copyright
+--------------------------------------------------------------------------------*/
+
+#copyright-wrap {
+	background:url(copyright-bg-$Color.jpg) repeat-x;
+	height:39px;
+}
+
+/* Footer
+--------------------------------------------------------------------------------*/
+
+#footer-wrap {
+	text-align:right;
+	background:url(footer-bg-bottom-$Color.jpg) repeat top;
+	font-size:13px;
+	color: #eabea8;
+}
+
+#footer-wrap-inner {
+	background:url(footer-bg-$Color.jpg) repeat-x top;
+	overflow:hidden;
+}
+
+
+#footer-wrap .container {
+	padding:20px 0px;
+}
+
+#footer-wrap h2 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:17px;
+	color:#fff;
+}
+
+
+#footer-wrap blockquote {
+	font-style:italic;
+	border-left:4px solid $BlockquoteFooterBorder !important;
+	margin:10px 0 10px 0;
+	padding-left:20px;
+	line-height:1.5;
+	color:$BlockquoteFooterColor;
+}
+
+
+#footer-wrap a {
+	color: #fff;
+}
+
+#footer-wrap a:hover {
+	color: #fff;
+	text-decoration:underline;
+}
+
+#footer-wrap .wsite-form-container {
+	text-align:left;
+	margin-top:0 !important;
+}
+
+#footer-wrap .wsite-form-input, #footer-wrap .wsite-search-element-input {
+	background:url(footer-input-bg.png) repeat;
+	border:1px solid $FooterInputBorder;
+	border-radius:3px;
+	-webkit-box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+	padding:5px !important;
+	color:#eadfd2;
+}
+
+#footer-wrap .wsite-search-element-submit {
+	background: url(search-dark.png) left;
+}
+
+/* Form Customization
+--------------------------------------------------------------------------------*/
+
+.wsite-form-label {
+	display: inline-block;
+	font-weight:normal;
+}
+
+.wsite-form-input, .wsite-search-element-input {
+	background: #fff;
+	border: 1px solid #c7c7c7;
+	padding: 5px !important;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size:12px;
+	-webkit-box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-select {
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	border: 1px solid #c7c7c7;
+	width: 380px;
+	padding:3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons
+--------------------------------------------------------------------------------*/
+
+/* Small structure & regular style */
+
+.wsite-button {
+	height: 37px;
+	display: inline-block;
+	padding: 0px 13px 0px 0px;
+	background: url(dark_button-$Color.png) no-repeat 100% -114px;
+}
+
+.wsite-button:hover {
+	background-position: 100% -152px;
+}
+
+.wsite-button:active {
+	background-position: 100% -190px;
+}
+
+.wsite-button-inner {
+	color: #ecdbc8 !important;
+	font-family:"Times New Roman", Times, serif;	
+    height: 37px;
+	line-height: 33px;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0px 5px 0px 18px ;
+	background: url(dark_button-$Color.png) no-repeat 0px 0px;
+}
+
+.wsite-button:hover .wsite-button-inner {
+	background-position: 0px -38px;
+}
+
+.wsite-button:active .wsite-button-inner {
+	background-position: 0px -76px;
+}
+
+/* Large structure & regular style  */
+
+.wsite-button-large {
+	color: #ecdbc8 !important;
+	height: 46px;
+	background: url(dark_button_large-$Color.png) no-repeat 100% -138px;
+	padding: 0px 10px 0px 0px;
+}
+
+.wsite-button-large:hover {
+	background-position: 100% -184px;
+}
+
+.wsite-button-large:active {
+	background-position: 100% -230px;
+}
+
+.wsite-button-large .wsite-button-inner {
+	height: 46px;
+	line-height: 41px;
+	padding: 0px 9px 0px 19px;
+	background: url(dark_button_large-$Color.png) no-repeat 0px 0px;
+}
+
+.wsite-button-large:hover .wsite-button-inner {
+	background-position:0px -46px;
+}
+
+.wsite-button-large:active .wsite-button-inner {
+	background-position: 0px -92px;
+}
+
+/* Highlighted styles */
+
+.wsite-button-highlight {
+	background-image: url(dark_button_highlight-$Color.png);
+	color: $HighlightButtonText !important;
+}
+
+.wsite-button-highlight .wsite-button-inner {
+	background-image: url(dark_button_highlight-$Color.png);
+	color: $HighlightButtonText !important;
+}
+
+.wsite-button-large.wsite-button-highlight {
+	background-image: url(dark_button_large_highlight-$Color.png);
+	color: $HighlightButtonText !important;
+}
+
+.wsite-button-large.wsite-button-highlight .wsite-button-inner {
+	background-image: url(dark_button_large_highlight-$Color.png);
+	color: $HighlightButtonText !important;
+}
+
+
+/* Light Background Buttons
+--------------------------------------------------------------------------------*/
+
+/* Small structure & regular style */
+
+#main-wrap .wsite-button {
+	background: url(light_button-$Color.png) no-repeat 100% -114px;
+}
+
+#main-wrap .wsite-button:hover {
+	background-position: 100% -152px;
+}
+
+#main-wrap .wsite-button:active {
+	background-position: 100% -190px;
+}
+
+#main-wrap .wsite-button-inner {
+	background: url(light_button-$Color.png) no-repeat 0px 0px;
+}
+
+#main-wrap .wsite-button:hover .wsite-button-inner {
+	background-position: 0px -38px;
+}
+
+#main-wrap .wsite-button:active .wsite-button-inner {
+	background-position: 0px -76px;
+}
+
+/* Large structure & regular style  */
+
+#main-wrap .wsite-button-large {
+	background: url(light_button_large-$Color.png) no-repeat 100% -138px;
+}
+
+#main-wrap .wsite-button-large:hover {
+	background-position: 100% -184px;
+}
+
+#main-wrap .wsite-button-large:active {
+	background-position: 100% -230px;
+}
+
+#main-wrap .wsite-button-large .wsite-button-inner {
+	background: url(light_button_large-$Color.png) no-repeat 0px 0px;
+}
+
+#main-wrap .wsite-button-large:hover .wsite-button-inner {
+	background-position:0px -46px;
+}
+
+#main-wrap .wsite-button-large:active .wsite-button-inner {
+	background-position: 0px -92px;
+}
+
+/* Highlighted styles */
+
+#main-wrap .wsite-button-highlight {
+	background-image: url(light_button_highlight-$Color.png);
+}
+
+#main-wrap .wsite-button-highlight .wsite-button-inner {
+	background-image: url(light_button_highlight-$Color.png);
+}
+
+#main-wrap .wsite-button-large.wsite-button-highlight {
+	background-image: url(light_button_large_highlight-$Color.png);
+}
+
+#main-wrap .wsite-button-large.wsite-button-highlight .wsite-button-inner {
+	background-image: url(light_button_large_highlight-$Color.png);
+}
